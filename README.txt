@@ -1,3 +1,5 @@
+Things to do/install:
+
 1) Install Visual Studio Code
 2) Install Arduino 1.18.9 Version. Not 2.x
 3) Install Arduino, C/C++, C/C++ Extension Pack extensions from vscode
