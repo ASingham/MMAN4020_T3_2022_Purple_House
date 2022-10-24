@@ -1,3 +1,4 @@
+// Function to send data to AskSensor
 void send_data(String apiKeyIn, float sens1C) {
   // Create a URL for updating module 1, module2 and module3 request
     String url = "http://api.asksensors.com/write/";

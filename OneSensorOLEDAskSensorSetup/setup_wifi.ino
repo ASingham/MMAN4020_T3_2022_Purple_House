@@ -1,3 +1,4 @@
+// Function to establish WiFi Connection
 void setup_wifi(const char* ssid, const char* password) {
   Serial.println("*****************************************************");
   Serial.println("********** Program Start : Connect ESP32 to AskSensors.");
