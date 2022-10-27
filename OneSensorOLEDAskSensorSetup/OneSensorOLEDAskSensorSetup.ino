@@ -16,13 +16,16 @@ Connect ESP32 to AskSensors
 WiFiMulti WiFiMulti;
 HTTPClient ask;
 // TODO: ESP32 user config
-const char* ssid = "NotThisOne"; //Wifi SSID
-const char* password = "CantFollowInstructions?"; //Wifi Password
+// const char* ssid = "NotThisOne"; // Wifi SSID
+// const char* password = "CantFollowInstructions?"; // Wifi Password
+const char* ssid = "Optus_963915"; // Wifi SSID
+const char* password = "bruntsnabsXwGje"; // Wifi Password
 String apiKeyIn = "NOJqSJL3EhVkv1Dixm4rPzE5xngy5mwM"; // API Key
 const unsigned int writeInterval = 25000; // write interval (in ms)
 // ASKSENSORS host config
 const char* host = "api.asksensors.com";
 const int httpPort = 80; // port
+bool wifiConnected;
 
 // Data wire is connected to GPIO4
 #define ONE_WIRE_BUS 4
@@ -44,64 +47,68 @@ DallasTemperature sensors(&oneWire);
 // Create the OLED display
 Adafruit_SH1106G display = Adafruit_SH1106G(128, 64, OLED_MOSI, OLED_CLK, OLED_DC, OLED_RST, OLED_CS);
 
-//  Device addresses found previously using file GenerateTempSensorAddress and manually reading the serial monitor output and then writing addresses below.
-// This process should be autonomised with code but hasn't been yet.
-DeviceAddress sensor1 = { 0x28, 0xDA, 0x59, 0x95, 0xF0, 0x1, 0x3C, 0x47 };
-DeviceAddress sensor2;
-DeviceAddress sensor3;
-DeviceAddress sensor4; 
-
-void setup(){
+void setup() {
+  Serial.println("======================================");
   // open serial
   Serial.begin(115200);
   sensors.begin();
 
   // Setup OLED Screen
+  Serial.println("Setting up OLED...");
   setup_oled();
-  Serial.print("OLED setup complete..."); 
+  Serial.println("OLED setup complete.");
 
   // Setup WiFi connection
-  setup_wifi(ssid, password);
-  display_wifi_success();
-  Serial.print("WiFi setup complete."); 
+  display.setTextSize(1);
+  display.setTextColor(SH110X_WHITE);
+  display.setCursor(0, 20);
+  display.println("Setting up WiFi...");
+  display.display();
+  bool success = setup_wifi(ssid, password);
+  if (success) {
+    Serial.println("WiFi setup complete.");
+  }
+  display_wifi_success(success);
   
+  // Setup sensors
   int devices = sensor_check();
   display_sensor_success(devices);
 
 }
 
-void loop(){
+void loop() {
+  Serial.print("Requesting temperatures...");
+  sensors.requestTemperatures(); // Send the command to get temperatures
+  Serial.println("DONE");
 
-  // // Use WiFiClient class to create TCP connections
-  WiFiClient client;
+  // Initialise temperature array
+  float temperatures[4] = { -127.0, -127.0, -127.0, -127.0 };
+  get_sensors_data(temperatures);
 
-  if (!client.connect(host, httpPort)) {
-    Serial.print(".");
-    return;
-  } else {
+  // Print temperatures to serial monitor
+  for (int i=0; i < NUMBER_OF_SENSORS; i++) {
+    Serial.print("Sensor " + String(i+1) + ": ");
+    Serial.print(temperatures[i]);
+    Serial.println(" C");
+  }
 
-    Serial.print("Requesting temperatures...");
-    sensors.requestTemperatures(); // Send the command to get temperatures
-    Serial.println("DONE");
+  // Update data on display
+  int battValue = analogRead(A13);
+  WiFiClient client; // Use WiFiClient class to create TCP connections
+  bool wifiConnected = client.connect(host, httpPort);
+  update_screen(temperatures, battValue, wifiConnected);
+  
+  // Send data to AskSensors
+  if (wifiConnected) send_data(apiKeyIn, temperatures); 
+      
+  Serial.println("==============================");
 
-    Serial.print("Sensor 1(*C): ");
-    float sens1C = sensors.getTempC(sensor1);
-    Serial.print(sens1C);
-    update_temperature(sens1C, 0, 0, 0); 
-    // float* temperatures = get_sensors_data();
-    // float sens1C = temperatures[0];
-    // float sens2C = temperatures[1];
-    // float sens3C = temperatures[2];
-    // float sens4C = temperatures[3];
-    // update_temperature(sens1C, sens2C, sens3C, sens4C); 
-
-    send_data(apiKeyIn, sens1C); 
-       
-    Serial.println("********** End ");
-    Serial.println("*****************************************************");
-    
+  // Keep retrying to connect to WiFi
+  if (!wifiConnected) {
+    WiFiMulti.addAP(ssid, password);
+    WiFiMulti.run();
   }
   
   client.stop(); // stop client
-  delay(writeInterval); // delay
+  // delay(writeInterval); // delay
 }
