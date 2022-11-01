@@ -13,6 +13,7 @@
     <li><a href="#getting-started">Getting Started</a></li>
     <ul>
       <li><a href="#ESP32-package-installation">ESP32 Package Installation</a></li>
+      <li><a href="#Additional-Library-installation">Additional Library Installation</a></li>
       <li><a href="#usage">Usage</a></li>
     </ul>
     <li><a href="#license">License</a></li>
@@ -71,6 +72,9 @@ Source Repo for remote telemetry module C++ code to be used with ESP32 microcont
     Tools>Port>"The COM Port Used by You"
     ```
     If the COM port cannot be found, install a USB to UART Bridge using the following [tutorial](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
+
+### ESP32 Package Installation
+* Install OneWire and Dallas Temperature library
 
 ### Usage
 Launch the application with
