@@ -108,7 +108,7 @@ Source Repo for remote telemetry module C++ code to be used with ESP32 microcont
     ```
 3. Press the Upload button in the Arduino IDE to compile the code and upload it to the connected board. 
     
-    After a few seconds the output should be titled:
+    After a few seconds the output should say:
     ```sh
     "Done uploading"
     ```
