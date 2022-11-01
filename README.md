@@ -23,34 +23,54 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Simple React web application which allows a user to upload a CSV file containing temperature data to analyse and visualise.
+Source Repo for remote telemetry module C++ code to be used with ESP32 microcontroller, 4 ds18b20 temperature sensors and AskSensor IoT subscription.
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
-* Ensure the latest version of `Node.js` is installed (16.17.1), which can be downloaded from [nodejs.org](https://nodejs.org/en/).
-* Then ensure the latest version of `npm` is installed by running the command:
+* Ensure the latest version of Arduino IDE software is installed (2.0.1), which can be downloaded from [Arduino.cc](https://www.arduino.cc/en/software/).
+* Ensure the ESP32 Add-on is installed in the Arduino IDE. See below for steps to complete this. 
+* Then Ensure both the  latest version of `npm` is installed by running the command:
   ```sh
   npm install -g npm
   ```
 
 ### Installation
-1. Clone the repo
+1. In the Arduino IDE, go to: 
     ```sh
-    git clone https://github.com/noah-correa/purple-house-data-dashboard.git
+    File>preferences
     ```
-2. Navigate into the repo
+2. In the "Additional Board Manager" URLs field, enter:
     ```sh
-    cd purple-house-data-dashboard
+    https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
     ```
-3. Install NPM packages
+    and then click "OK"
+
+3. In the Arduino IDE, open the Boards Manager by clicking through:
     ```sh
-    npm install
+    Tools>Board>Boards Manager
     ```
     If an error appears, install using
     ```sh
     npm install --legacy-peer-deps
     ```
+    
+4. In Boards Manager, search for ESP32 and install:
+    ```sh
+    "ESP32 by Espressif Systems"
+    ```
+5. Test the installation and compatibility of the ESP32 board package 
+    
+    Plug in the physical ESP32 board into the computer. 
+    * In Arduino IDE, select the board by clicking through:
+    ```sh
+    Tools>Board>Board>Adafruit ESP32 Feather
+    ```
+    * Select the Port used to connect the board to the computer by clicking through:
+    ```sh
+    Tools>Port>"The COM Port Used by You"
+    ```
+    If the COM port cannot be found, install a USB to UART Bridge using the following [tutorial](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers).
 
 ### Usage
 Launch the application with
