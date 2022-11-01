@@ -12,7 +12,7 @@
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
     <ul>
-      <li><a href="#ESP32-package-installation">Installation</a></li>
+      <li><a href="#ESP32-package-installation">ESP32 Package Installation</a></li>
       <li><a href="#usage">Usage</a></li>
     </ul>
     <li><a href="#license">License</a></li>
@@ -35,7 +35,7 @@ Source Repo for remote telemetry module C++ code to be used with ESP32 microcont
   npm install -g npm
   ```
 
-### Installation
+### ESP32 Package Installation
 1. In the Arduino IDE, go to: 
     ```sh
     File>preferences
