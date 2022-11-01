@@ -1,7 +1,7 @@
 <div align="center">
-  <h3 align="center">Purple House Data Dashboard</h3>
+  <h3 align="center">Purple House Remote Telemetry Module Setup</h3>
   <p align="center">
-    Analyse temperature data from CSV file
+    Code installation and Microcontroller integration
   </p>
 </div>
 
