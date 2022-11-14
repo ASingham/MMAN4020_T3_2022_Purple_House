@@ -99,7 +99,14 @@ Now the user has Git installed, clone the repo into the desired location using t
     ```
 
 #### Method 2: Downloading a zip file (Easiest method if version control isn't neccessary): 
-1. 
+1. On the repo homepage, click on the green code icon to bring up the following menu:
+![My Image](images/"code location".jpg)
+
+2. Click on the `Download ZIP` icon in the drop down menu to download a copy of the repo folder to your local device.
+
+3. In your document manager on your local device, navigate to downloads, unzip the folder, and move the unzipped contents to the desired location. 
+
+
 
 ## Usage
 1. Launch Arduino IDE application and from the cloned repo, open:
