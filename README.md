@@ -151,6 +151,10 @@ Now the user has Git installed, clone the repo into the desired location using t
 5. To see the output from the board, set the baud rate to `115200` in the serial monitor
 
 6. The serial monitor output should show the following output messages if the code has been correctly flashed and device is working correctly:
+<img
+  src="images/serial-output-setup-complete.png"
+  alt="Alt text"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 7. After the upload is complete, whilst the serial monitor is displaying the above and the device is initiating its bootup sequence, the OLED screen should display the following:
 
