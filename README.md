@@ -154,6 +154,6 @@ Now the user has Git installed, clone the repo into the desired location using t
 
 7. After the upload is complete, the device should initiate its bootup sequence, indicated by the OLED screen displaying the following:
 <img
-  src="images/screen-bootup.png"
+  src="images/screen-bootup.jpg"
   alt="Alt text"
-  style="display: inline-block; margin: 0 auto; max-width: 300px">
+  style="display: inline-block; margin: 0 auto; width: 100">
