@@ -57,7 +57,7 @@ Source Repo for remote telemetry module C++ code to be used with ESP32 microcont
     ```
 5. Test the installation and compatibility of the ESP32 board package 
     
-    Plug in the physical ESP32 board into the computer. 
+    Plug the physical device into the computer using the USB cable. 
     * In Arduino IDE, select the board by clicking through:
     ```sh
     Tools>Board>Board>Adafruit ESP32 Feather
@@ -100,7 +100,10 @@ Now the user has Git installed, clone the repo into the desired location using t
 
 #### Method 2: Downloading a zip file (Easiest method if version control isn't neccessary): 
 1. On the repo homepage, click on the green code icon to bring up the following menu:
-![My Image](images/"code location".jpg)
+<img
+  src="images/code-location.png"
+  alt="Alt text"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 2. Click on the `Download ZIP` icon in the drop down menu to download a copy of the repo folder to your local device.
 
@@ -109,10 +112,10 @@ Now the user has Git installed, clone the repo into the desired location using t
 
 
 ## Usage
-1. Launch Arduino IDE application and from the cloned repo, open:
-    #### `GenerateTempDataSendAskSensor.ino`
+1. Launch Arduino IDE application and from the cloned/downloaded repo, open:
+    #### `OneSensorOLEDAskSensorSetup.ino`
 
-2. As before, plug the board into the computer, and select both the board and the port from the Tools menu.
+2. As before, plug the device into the computer using the USB cable, and select both the board and the port from the Tools menu.
     ```sh
     Tools>Board>Board>Adafruit ESP32 Feather
     ```
@@ -126,7 +129,7 @@ Now the user has Git installed, clone the repo into the desired location using t
     "Done uploading"
     ```
 
-4. Open the Serial Monitor in the Arduino IDE
+4. Open the Serial Monitor in the Arduino IDE by pressing the button highlighted by the red circle below
 
     To see the output from the board, set the baud rate to: 
     #### `115200`
