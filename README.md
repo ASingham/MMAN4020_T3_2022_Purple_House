@@ -69,9 +69,11 @@ Source Repo for remote telemetry module C++ code to be used with ESP32 microcont
 #### `Sketch>Include Library>Manage Libraries`
 
 2. Using the search box, install the following four library packages:
+    Search `OneWire` and install:
     ```sh
     "OneWire" library by Paul Stoffregen et al.
     ```
+    Search `Dallas` and install:
     ```sh
     "DallasTemperature" by Miles Burton et al. 
     ```
@@ -79,13 +81,17 @@ Source Repo for remote telemetry module C++ code to be used with ESP32 microcont
     ```sh
     "Adafruit GFX" by Adafruit
     ```
-    Search SH110X and install:
+    Search `SH110X` and install:
     ```sh
     "Adafruit SH110X" by Adafruit
     ```
     
     * Note that if there are additional dependencies required for the libraries listed above, choose the `INSTALL ALL` selection when asked if you would like to install all the missing dependencies.
     ![image](https://user-images.githubusercontent.com/67949367/201589216-1d35ec67-5ab0-4af6-955e-e549dd5a16cb.png)
+<img
+  src="images/install-all.png"
+  alt="Alt text"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 3. Restart Arduino IDE after installing library packages.
 
