@@ -87,7 +87,6 @@ Source Repo for remote telemetry module C++ code to be used with ESP32 microcont
     ```
     
     * Note that if there are additional dependencies required for the libraries listed above, choose the `INSTALL ALL` selection when asked if you would like to install all the missing dependencies.
-    ![image](https://user-images.githubusercontent.com/67949367/201589216-1d35ec67-5ab0-4af6-955e-e549dd5a16cb.png)
 <img
   src="images/install-all.png"
   alt="Alt text"
@@ -149,5 +148,12 @@ Now the user has Git installed, clone the repo into the desired location using t
   alt="Alt text"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
     
-5. To see the output from the board, set the baud rate to `115200` in the serial monitor  
+5. To see the output from the board, set the baud rate to `115200` in the serial monitor
 
+6. The serial monitor output should show the following setup output messages if working correctly:
+
+7. After the upload is complete, the device should initiate its bootup sequence, indicated by the OLED screen displaying the following:
+<img
+  src="images/screen-bootup.png"
+  alt="Alt text"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
