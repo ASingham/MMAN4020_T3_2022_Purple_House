@@ -30,10 +30,6 @@ Source Repo for remote telemetry module C++ code to be used with ESP32 microcont
 ## Getting Started
 * Ensure the latest version of Arduino IDE software is installed (2.0.1), which can be downloaded from [Arduino.cc](https://www.arduino.cc/en/software/).
 * Ensure the ESP32 Add-on is installed in the Arduino IDE. See below for steps to complete this. 
-* Then Ensure both the  latest version of `npm` is installed by running the command:
-  ```sh
-  npm install -g npm
-  ```
 
 ### ESP32 Package Installation
 1. In the Arduino IDE, go to: 
@@ -85,15 +81,25 @@ Source Repo for remote telemetry module C++ code to be used with ESP32 microcont
     ```
 3. Restart Arduino IDE after installing library packages.
 
-### Remote Telemetry Module Code Installation
-1. Clone the repo
+### Remote Telemetry Module Code Installation (2 methods)
+#### Method 1: Using Git (preferred method to enable version control if changes are to be made)
+
+If the user has not installed Git onto their system, use this [tutorial](https://github.com/git-guides/install-git) to do so before continuing.
+
+Now the user has Git installed, clone the repo into the desired location using the following steps:
+1. Open the command prompt if using windows, and navigate to the desired folder for storing the repo.
+    To do this, use the commands `cd` and `dir` as required to navigate between folders. A tutorial on this can be found [here](https://www.digitalcitizen.life/command-prompt-how-use-basic-commands/)
+2. Clone the repo by pasting this command into the command prompt once the desired folder location is reached.
     ```sh
     git clone https://github.com/ASingham/MMAN4020_T3_2022_Purple_House.git
     ```
-2. Navigate into the repo
+3. To check if the clone was successful, navigate into the newly created repo using the following command:
     ```sh
     cd MMAN4020_T3_2022_Purple_House
     ```
+
+#### Method 2: Downloading a zip file (Easiest method if version control isn't neccessary): 
+1. 
 
 ## Usage
 1. Launch Arduino IDE application and from the cloned repo, open:
