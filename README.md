@@ -36,7 +36,7 @@ Source Repo for remote telemetry module C++ code to be used with ESP32 microcont
     ```sh
     File>preferences
     ```
-2. In the "Additional Board Manager" URLs field, enter:
+2. In the `Additional Board Manager URLs` field, enter:
     ```sh
     https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
     ```
@@ -45,10 +45,6 @@ Source Repo for remote telemetry module C++ code to be used with ESP32 microcont
 3. In the Arduino IDE, open the Boards Manager by clicking through:
     ```sh
     Tools>Board>Boards Manager
-    ```
-    If an error appears, install using
-    ```sh
-    npm install --legacy-peer-deps
     ```
     
 4. In Boards Manager, search for ESP32 and install:
@@ -72,13 +68,25 @@ Source Repo for remote telemetry module C++ code to be used with ESP32 microcont
 1. In Arduino IDE, navigate to the Library Manager:
 #### `Sketch>Include Library>Manage Libraries`
 
-2. Using the search box, install the following two library packages:
+2. Using the search box, install the following four library packages:
     ```sh
     "OneWire" library by Paul Stoffregen et al.
     ```
     ```sh
     "DallasTemperature" by Miles Burton et al. 
     ```
+    Search `GFX` and install:
+    ```sh
+    "Adafruit GFX" by Adafruit
+    ```
+    Search SH110X and install:
+    ```sh
+    "Adafruit SH110X" by Adafruit
+    ```
+    
+    * Note that if there are additional dependencies required for the libraries listed above, choose the `INSTALL ALL` selection when asked if you would like to install all the missing dependencies.
+    ![image](https://user-images.githubusercontent.com/67949367/201589216-1d35ec67-5ab0-4af6-955e-e549dd5a16cb.png)
+
 3. Restart Arduino IDE after installing library packages.
 
 ### Remote Telemetry Module Code Installation (2 methods)
@@ -135,6 +143,5 @@ Now the user has Git installed, clone the repo into the desired location using t
   alt="Alt text"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
     
-5. To see the output from the board, set the baud rate to `115200` 
-    #### `115200`
+5. To see the output from the board, set the baud rate to `115200` in the serial monitor  
 
