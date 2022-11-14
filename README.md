@@ -156,4 +156,4 @@ Now the user has Git installed, clone the repo into the desired location using t
 <img
   src="images/screen-bootup.jpg"
   alt="Alt text"
-  style="display: inline-block; margin: 0 auto; width: 100">
+  style="display: inline-block; margin: 0 auto; width= "48">
