@@ -16,7 +16,7 @@
       <li><a href="#Additional-Library-installation">Additional Library Installation</a></li>
       <li><a href="#Remote-Telemetry-Module-Code-Installation">Remote Telemetry Module Code Installation</a></li>
     </ul>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#usage">Flashing Code onto MC </a></li>
   </ol>
 </details>
 
@@ -164,10 +164,9 @@ Now the user has Git installed, clone the repo into the desired location using t
   alt="Alt text"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
 
-7. After the upload is complete, whilst the serial monitor is displaying the above and the device is initiating its bootup sequence, the OLED screen should display the following:
+7. After the upload is complete, whilst the serial monitor is displaying the above and the device is booting up, the OLED screen should display the following sequentially:
 
 <img
-  src="images/screen-bootup.jpg"
+  src="images/screen-progression.jpg"
   alt="Alt text"
-  style="display: inline-block; margin: 0 auto;" 
-  width= "300">
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
