@@ -130,7 +130,11 @@ Now the user has Git installed, clone the repo into the desired location using t
     ```
 
 4. Open the Serial Monitor in the Arduino IDE by pressing the button highlighted by the red circle below
-
-    To see the output from the board, set the baud rate to: 
+<img
+  src="images/serial-monitor.png"
+  alt="Alt text"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
+    
+5. To see the output from the board, set the baud rate to `115200` 
     #### `115200`
 
