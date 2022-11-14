@@ -143,7 +143,6 @@ Now the user has Git installed, clone the repo into the desired location using t
   src="images/Asksensor-new-sensor.jpg"
   alt="Alt text"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
-  
   Save the new sensor object by pressing the orange `save` button in the bottom right.
 
 5. The Sensor devices page should now include the newly made sensor object. Press the green `Visualize` button next to the newly made sensor object which will result in the following page being displayed:
