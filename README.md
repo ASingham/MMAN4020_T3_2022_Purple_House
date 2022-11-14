@@ -15,6 +15,7 @@
       <li><a href="#ESP32-package-installation">ESP32 Package Installation</a></li>
       <li><a href="#Additional-Library-installation">Additional Library Installation</a></li>
       <li><a href="#Remote-Telemetry-Module-Code-Installation">Remote Telemetry Module Code Installation</a></li>
+      <li><a href="#Preparing-AskSensor">Preparing AskSensor</a></li>
     </ul>
     <li><a href="#flashing-code-onto-MC">Flashing Code onto MC </a></li>
   </ol>
@@ -122,7 +123,34 @@ Now the user has Git installed, clone the repo into the desired location using t
 
 3. In your document manager on your local device, navigate to downloads, unzip the folder, and move the unzipped contents to the desired location. 
 
+### Preparing AskSensor
+1. In a web browser, go to the [AskSensor website](https://asksensors.com/home.html) and login using the Purple House login details
 
+2. From the AskSensor home page, navigate to the Sensor devices page.
+<img
+  src="images/asksensor-homepage.jpg"
+  alt="Alt text"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
+  
+3. Press the orange `+ New Sensor` button to create a new device object that will contain the data for the new Remote Telemetry Device.
+
+4. Fill in the required fields: 
+    * press the `+ Add Module` button until 4 modules have been created for the new Sensor device. 
+    * Name the sensor as appropriate based on the location of deployment. This field is highlighted in yellow below.
+    * Name the four modules highlighted in blue below by pressing the pink `edit` button to the left of each module.
+    * If desired and the location is known, fill in the `Latitude` and `Longitude` fields for the location of deployment of the Remote Telemetry Device.
+<img
+  src="images/Asksensor-new-sensor.jpg"
+  alt="Alt text"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
+  
+  Save the new sensor object by pressing the orange `save` button in the bottom right.
+
+5. The Sensor devices page should now include the newly made sensor object. Press the green `Visualize` button next to the newly made sensor object which will result in the following page being displayed:
+<img
+  src="images/Asksensor-sensor-details.jpg"
+  alt="Alt text"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 ## Flashing Code onto MC
 1. Launch Arduino IDE application and from the cloned/downloaded repo, open:
@@ -133,8 +161,19 @@ Now the user has Git installed, clone the repo into the desired location using t
     // const char* ssid = "NotThisOne"; // Wifi SSID
     // const char* password = "CantFollowInstructions?"; // Wifi Password
     ```
-    
-3. Edit the characters in inverted commas within these two lines to reflect the Wi-Fi SSID network name and the Wi-Fi password that the device is to be connected to.
+    Edit the characters in inverted commas within these two lines to reflect the Wi-Fi SSID network name and the Wi-Fi password that the device is to be connected to.
+
+3. In a web browser, go to the [AskSensor website](https://asksensors.com/home.html) and login using the Purple House login details.
+
+4. From the AskSensor home page, navigate to the Sensor devices page.
+<img
+  src="images/asksensor-homepage.png"
+  alt="Alt text"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
+
+5. 
+
+3. Save the file after the changes are made
 
 2. As before, plug the device into the computer using the USB cable, and select both the board and the port from the Tools menu.
     ```sh
