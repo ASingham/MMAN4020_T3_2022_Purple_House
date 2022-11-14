@@ -16,7 +16,7 @@
       <li><a href="#Additional-Library-installation">Additional Library Installation</a></li>
       <li><a href="#Remote-Telemetry-Module-Code-Installation">Remote Telemetry Module Code Installation</a></li>
     </ul>
-    <li><a href="#usage">Flashing Code onto MC </a></li>
+    <li><a href="#flashing-code-onto-MC">Flashing Code onto MC </a></li>
   </ol>
 </details>
 
@@ -124,7 +124,7 @@ Now the user has Git installed, clone the repo into the desired location using t
 
 
 
-## Usage
+## Flashing Code onto MC
 1. Launch Arduino IDE application and from the cloned/downloaded repo, open:
     #### `OneSensorOLEDAskSensorSetup.ino`
 
