@@ -128,6 +128,14 @@ Now the user has Git installed, clone the repo into the desired location using t
 1. Launch Arduino IDE application and from the cloned/downloaded repo, open:
     #### `OneSensorOLEDAskSensorSetup.ino`
 
+2. Navigate within the `OneSensorOLEDAskSensorSetup.ino` file to lines `19` and `20` showing:
+    ```sh
+    // const char* ssid = "NotThisOne"; // Wifi SSID
+    // const char* password = "CantFollowInstructions?"; // Wifi Password
+    ```
+    
+3. Edit the characters in inverted commas within these two lines to reflect the Wi-Fi SSID network name and the Wi-Fi password that the device is to be connected to.
+
 2. As before, plug the device into the computer using the USB cable, and select both the board and the port from the Tools menu.
     ```sh
     Tools>Board>Board>Adafruit ESP32 Feather
