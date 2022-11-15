@@ -1,0 +1,30 @@
+.verticalcontainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.verticalcontainer > *:first-child {
+  margin-top: 1rem;
+}
+.verticalcontainer > *:not(:last-child) {
+  margin-bottom: calc(1rem * 0.5);
+}
+.verticalcontainer > *:last-child {
+  margin-bottom: 1rem;
+}
+
+.splitbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tempWarning {
+  color: #ffa726;
+}
+
+.tempError {
+  color: #f44336;
+}

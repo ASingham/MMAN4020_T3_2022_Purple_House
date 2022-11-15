@@ -1,0 +1,7 @@
+data-visualisation-website/node_modules
+data-visualisation-website/dist
+
+data-visualisation-website/.firebase/*
+data-visualisation-website/.firebase
+data-visualisation-website/.firebaserc
+data-visualisation-website/firebase.json
