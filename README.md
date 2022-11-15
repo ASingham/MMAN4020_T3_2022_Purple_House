@@ -179,6 +179,7 @@ Now the user has Git installed, clone the repo into the desired location using t
     Edit the characters in inverted commas within these two lines to reflect the Wi-Fi SSID network name and the Wi-Fi password that the device is to be connected to.
 
 3. Find the unique API key for the AskSensor sensor device setup earlier.
+    
     In a web browser, go to the [AskSensors website](https://asksensors.com/home.html) and login using the Purple House login details.
     
     From the AskSensors home page, navigate to the Sensor devices page.
