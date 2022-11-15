@@ -15,7 +15,7 @@
       <li><a href="#ESP32-package-installation">ESP32 Package Installation</a></li>
       <li><a href="#Additional-Library-installation">Additional Library Installation</a></li>
       <li><a href="#Remote-Telemetry-Module-Code-Installation">Remote Telemetry Module Code Installation</a></li>
-      <li><a href="#Preparing-AskSensor">Preparing AskSensor</a></li>
+      <li><a href="#Preparing-AskSensors">Preparing AskSensors</a></li>
     </ul>
     <li><a href="#flashing-code-onto-MC">Flashing Code onto MC</a></li>
     <li><a href="#Data-Visualisation">Data Visualisation</a></li>
@@ -25,7 +25,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Source Repo for remote telemetry module C++ code to be used with ESP32 microcontroller, 4 ds18b20 temperature sensors and AskSensor IoT subscription.
+Source Repo for remote telemetry module C++ code to be used with ESP32 microcontroller, 4 ds18b20 temperature sensors and AskSensors IoT subscription.
 
 
 <!-- GETTING STARTED -->
@@ -124,10 +124,10 @@ Now the user has Git installed, clone the repo into the desired location using t
 
 3. In your document manager on your local device, navigate to downloads, unzip the folder, and move the unzipped contents to the desired location. 
 
-### Preparing AskSensor
-1. In a web browser, go to the [AskSensor website](https://asksensors.com/home.html) and login using the Purple House login details
+### Preparing AskSensors
+1. In a web browser, go to the [AskSensors website](https://asksensors.com/home.html) and login using the Purple House login details
 
-2. From the AskSensor home page, navigate to the Sensor devices page.
+2. From the AskSensors home page, navigate to the Sensor devices page.
 <img
   src="images/asksensor-homepage.jpg"
   alt="Alt text"
@@ -179,9 +179,9 @@ Now the user has Git installed, clone the repo into the desired location using t
     Edit the characters in inverted commas within these two lines to reflect the Wi-Fi SSID network name and the Wi-Fi password that the device is to be connected to.
 
 3. Find the unique API key for the AskSensor sensor device setup earlier.
-    In a web browser, go to the [AskSensor website](https://asksensors.com/home.html) and login using the Purple House login details.
+    In a web browser, go to the [AskSensors website](https://asksensors.com/home.html) and login using the Purple House login details.
     
-    From the AskSensor home page, navigate to the Sensor devices page.
+    From the AskSensors home page, navigate to the Sensor devices page.
     <img
       src="images/asksensor-homepage.jpg"
       alt="Alt text"
@@ -238,7 +238,7 @@ Now the user has Git installed, clone the repo into the desired location using t
 
 ## Data Visualisation
 1. Visualising the live temperature data received from the operating device
-    Log into the [AskSensor website](https://asksensors.com/home.html) and login using the Purple House login details.
+    Log into the [AskSensors website](https://asksensors.com/home.html) and login using the Purple House login details.
     
     Navigate to the Sensor devices page and press the green `Visualise` button to open the sensor details page. This will contain the previously created series of graphs for live data visualisation. 
     <img
@@ -248,5 +248,14 @@ Now the user has Git installed, clone the repo into the desired location using t
 
     ** Note: A custom dashboard can be created to display user specified graphs and visuals. A tutorial for this can be found [here](https://doc.asksensors.com/docs/d/s1/dashboard-customization/)
     
-    #### Important: Data published to AskSensor is retained for 18 months
+    ### Important: Data published to AskSensor is retained for 18 months
     
+2. Further detailed data analysis using developed Web App
+    A server based web application was developed for further analysis of the temperature data.
+    
+    This web app can be accessed from anywhere using the following address: 
+    ```sh
+    https://unswpurplehousedata.web.app/
+    ```
+    
+    ** Note: The web app can handle approximately 600 uploads of csv files per day without requiring a subscription service cost for server hosting.
