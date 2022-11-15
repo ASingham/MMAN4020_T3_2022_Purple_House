@@ -246,7 +246,7 @@ Now the user has Git installed, clone the repo into the desired location using t
     alt="Alt text"
     style="display: inline-block; margin: 0 auto; max-width: 300px">
 
-    * Note: A custom dashboard can be created to display user specified graphs and visuals. A tutorial for this can be found [here](https://doc.asksensors.com/docs/d/s1/dashboard-customization/)
+    ** Note: A custom dashboard can be created to display user specified graphs and visuals. A tutorial for this can be found [here](https://doc.asksensors.com/docs/d/s1/dashboard-customization/)
     
-    ** Note: Data published to AskSensor is retained for 18 months
+    #### Important: Data published to AskSensor is retained for 18 months
     
