@@ -4,6 +4,7 @@ bool setup_wifi(const char* ssid, const char* password) {
   Serial.println("Connecting ESP32 to AskSensors...");
 
   // connecting to the WiFi network
+  
   WiFiMulti.addAP(ssid, password);
   int i = 0;
   bool success = true;
@@ -25,6 +26,7 @@ bool setup_wifi(const char* ssid, const char* password) {
   } else {
     // could not connect
     Serial.println("Could not connect to WiFi.");
+    
   }
 
   return success;

@@ -12,7 +12,7 @@
 #define BATT_ICON_H 8
 #define WIFI_ICON_W 16
 #define WIFI_ICON_H 14
-const float MAX_ANALOG_VAL = 4095.0;
+const float MAX_ANALOG_VAL = 4098.0;
 const float MAX_BATTERY_VOLTAGE = 4.2; // Max LiPoly voltage of a 3.7 battery is 4.2
 
 const unsigned char battIconEmpty [] = { 0xff, 0xfe, 0x80, 0x02, 0xa0, 0x03, 0xa0, 0x03, 0xa0, 0x03, 0xa0, 0x03, 0x80, 0x02, 0xff, 0xfe };
@@ -90,7 +90,7 @@ void display_wifi_icon(bool connected) {
 }
 
 void display_battery_icon(int battValue) {
-  float voltageLevel = (battValue / MAX_ANALOG_VAL) * 2 * 1.1 * 3.3; // calculate voltage level
+  float voltageLevel = (battValue / MAX_ANALOG_VAL) * 2 * 3.3; // calculate voltage level
   float batteryFraction = voltageLevel / MAX_BATTERY_VOLTAGE;
   
   Serial.println((String)"Raw:" + battValue + " Voltage:" + voltageLevel + "V Percent: " + (batteryFraction * 100) + "%");

@@ -18,8 +18,8 @@ HTTPClient ask;
 // TODO: ESP32 user config
 // const char* ssid = "NotThisOne"; // Wifi SSID
 // const char* password = "CantFollowInstructions?"; // Wifi Password
-const char* ssid = "Optus_963915"; // Wifi SSID
-const char* password = "bruntsnabsXwGje"; // Wifi Password
+const char* ssid = "TelstraBC84CE"; // Wifi SSID
+const char* password = "8tj2y7z9b6"; // Wifi Password
 String apiKeyIn = "NOJqSJL3EhVkv1Dixm4rPzE5xngy5mwM"; // API Key
 const unsigned int writeInterval = 25000; // write interval (in ms)
 // ASKSENSORS host config
