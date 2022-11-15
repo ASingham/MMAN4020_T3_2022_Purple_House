@@ -162,7 +162,7 @@ Now the user has Git installed, clone the repo into the desired location using t
 
 7. Now, edit the fields to reflect the image below, such that a graphical depiction of the data for each module is created
   <img
-      src="images/AAsksensor-graph-edit.jpg"
+      src="images/Asksensor-graph-edit.jpg"
       alt="Alt text"
       style="display: inline-block; margin: 0 auto; max-width: 300px">
 
