@@ -178,7 +178,7 @@ Now the user has Git installed, clone the repo into the desired location using t
     Edit the characters in inverted commas within these two lines to reflect the Wi-Fi SSID network name and the Wi-Fi password that the device is to be connected to.
 
 3. Find the unique API key for the AskSensor sensor device setup earlier.
-    In a web browser, go to the [AskSensor website](https://asksensors.com/home.html) and login     using the Purple House login details.
+    In a web browser, go to the [AskSensor website](https://asksensors.com/home.html) and login using the Purple House login details.
     
     From the AskSensor home page, navigate to the Sensor devices page.
     <img
@@ -187,39 +187,47 @@ Now the user has Git installed, clone the repo into the desired location using t
       style="display: inline-block; margin: 0 auto; max-width: 300px">
 
     Select the respective sensor device and locate the `API Key In` under the `Sensor details tab`
-5. 
+    <img
+      src="images/asksensor-homepage.png"
+      alt="Alt text"
+      style="display: inline-block; margin: 0 auto; max-width: 300px">
 
-3. Save the file after the changes are made
+4. Return to Arduino IDE and navigate back to the `OneSensorOLEDAskSensorSetup.ino` file. Find line 21 showing:
+    ```sh
+    String apiKeyIn = "RanDomlEtTerAnDnUmbERsEQueNcE12436"; // API Key
+    ```
 
-2. As before, plug the device into the computer using the USB cable, and select both the board and the port from the Tools menu.
+5. Save the file after the changes are made
+
+6. As before, plug the device into the computer using the USB cable, and select both the board and the port from the Tools menu.
     ```sh
     Tools>Board>Board>Adafruit ESP32 Feather
     ```
     ```sh
     Tools>Port>"The_COM_Port_Used_by_You"
     ```
-3. Press the Upload button in the Arduino IDE to compile the code and upload it to the connected board. 
+7. Press the Upload button in the Arduino IDE to compile the code and upload it to the connected board. 
     
     After a few seconds the output should say:
     ```sh
     "Done uploading"
     ```
 
-4. Open the Serial Monitor in the Arduino IDE by pressing the button highlighted by the red circle below
+8. Open the Serial Monitor in the Arduino IDE by pressing the button highlighted by the red circle below
 <img
   src="images/serial-monitor.png"
   alt="Alt text"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
     
-5. To see the output from the board, set the baud rate to `115200` in the serial monitor
+9. To see the output from the board, set the baud rate to `115200` in the serial monitor
 
-6. The serial monitor output should show the following output messages if the code has been correctly flashed and device is working correctly:
+10. The serial monitor output should show the following output messages if the code has been correctly flashed and device is working correctly:
 <img
   src="images/serial-output-setup-complete.png"
   alt="Alt text"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
 
-7. After the upload is complete, whilst the serial monitor is displaying the above and the device is booting up, the OLED screen should display the following sequentially:
+11. After the upload is complete, whilst the serial monitor is displaying the above and the device is booting up, the OLED screen should display the following sequentially:
 
 <img
   src="images/screen-progression.jpg"
