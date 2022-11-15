@@ -182,13 +182,13 @@ Now the user has Git installed, clone the repo into the desired location using t
     
     From the AskSensor home page, navigate to the Sensor devices page.
     <img
-      src="images/asksensor-homepage.png"
+      src="images/asksensor-homepage.jpg"
       alt="Alt text"
       style="display: inline-block; margin: 0 auto; max-width: 300px">
 
     Select the respective sensor device and locate the `API Key In` under the `Sensor details tab`
     <img
-      src="images/asksensor-homepage.png"
+      src="images/Asksensor-sensor-details.jpg"
       alt="Alt text"
       style="display: inline-block; margin: 0 auto; max-width: 300px">
 
