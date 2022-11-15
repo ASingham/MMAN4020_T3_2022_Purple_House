@@ -17,7 +17,8 @@
       <li><a href="#Remote-Telemetry-Module-Code-Installation">Remote Telemetry Module Code Installation</a></li>
       <li><a href="#Preparing-AskSensor">Preparing AskSensor</a></li>
     </ul>
-    <li><a href="#flashing-code-onto-MC">Flashing Code onto MC </a></li>
+    <li><a href="#flashing-code-onto-MC">Flashing Code onto MC</a></li>
+    <li><a href="#Data-Visualisation">Data Visualisation</a></li>
   </ol>
 </details>
 
@@ -233,3 +234,19 @@ Now the user has Git installed, clone the repo into the desired location using t
   src="images/screen-progression.jpg"
   alt="Alt text"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
+
+
+## Data Visualisation
+1. Visualising the live temperature data received from the operating device
+    Log into the [AskSensor website](https://asksensors.com/home.html) and login using the Purple House login details.
+    
+    Navigate to the Sensor devices page and press the green `Visualise` button to open the sensor details page. This will contain the previously created series of graphs for live data visualisation. 
+    <img
+    src="images/screen-progression.jpg"
+    alt="Alt text"
+    style="display: inline-block; margin: 0 auto; max-width: 300px">
+
+    * Note: A custom dashboard can be created to display user specified graphs and visuals. A tutorial for this can be found [here](https://doc.asksensors.com/docs/d/s1/dashboard-customization/)
+    
+    ** Note: Data published to AskSensor is retained for 18 months
+    
