@@ -20,7 +20,7 @@ HTTPClient ask;
 // const char* password = "CantFollowInstructions?"; // Wifi Password
 const char* ssid = "TelstraBC84CE"; // Wifi SSID
 const char* password = "8tj2y7z9b6"; // Wifi Password
-String apiKeyIn = "NOJqSJL3EhVkv1Dixm4rPzE5xngy5mwM"; // API Key
+String apiKeyIn = "qxj0vIPw25K2R5K6onSJ84yS72apbMil"; // API Key
 const unsigned int writeInterval = 25000; // write interval (in ms)
 // ASKSENSORS host config
 const char* host = "api.asksensors.com";
