@@ -24,8 +24,11 @@ HTTPClient ask;
 const char* ssid = "INPUT WiFi SSID"; // Wifi SSID
 const char* password = "INPUT WiFi Password"; // Wifi Password
 
-String apiKeyIn = "qxj0vIPw25K2R5K6onSJ84yS72apbMil"; // API Key
+// TODO: AskSensor Update Interval
 const unsigned long writeInterval = 25000; // write interval (in ms)
+
+String apiKeyIn = "qxj0vIPw25K2R5K6onSJ84yS72apbMil"; // API Key
+
 // ASKSENSORS host config
 const char* host = "api.asksensors.com";
 const int httpPort = 80; // port
