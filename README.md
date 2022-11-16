@@ -17,7 +17,7 @@
       <li><a href="#Remote-Telemetry-Module-Code-Installation">Remote Telemetry Module Code Installation</a></li>
       <li><a href="#Preparing-AskSensors">Preparing AskSensors</a></li>
     </ul>
-    <li><a href="#flashing-code-onto-MC">Flashing Code onto MC</a></li>
+    <li><a href="#flashing-code-onto-Device">Flashing Code onto Device</a></li>
     <li><a href="#Data-Visualisation">Data Visualisation</a></li>
   </ol>
 </details>
@@ -167,7 +167,7 @@ Now the user has Git installed, clone the repo into the desired location using t
       alt="Alt text"
       style="display: inline-block; margin: 0 auto; max-width: 300px">
 
-## Flashing Code onto MC
+## Flashing Code onto Device
 1. Launch Arduino IDE application and from the cloned/downloaded repo, open:
     #### `OneSensorOLEDAskSensorSetup.ino`
 
@@ -300,6 +300,10 @@ Now the user has Git installed, clone the repo into the desired location using t
       src="images/web-app-date-selection.jpg"
       alt="Alt text"
       style="display: inline-block; margin: 0 auto; max-width: 300px">
+    
+    To swap out csv files or to upload new files, either refresh the webpage or press the `NEW FILE` button in the top right corner. 
+    
+    Additionally, the data visualisation tools can be customised using the settings widget in the top right corner.
     
     ** Note: The web app can handle approximately 600 uploads of csv files per day without requiring a subscription service cost for server hosting.
     
