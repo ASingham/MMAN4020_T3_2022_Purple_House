@@ -1,5 +1,5 @@
 <div align="center">
-  <h3 align="center">Purple House Remote Telemetry Module Setup</h3>
+  <h3 align="center">Purple House Remote Telemetry Module Setup and User Manual</h3>
   <p align="center">
     Code installation and Microcontroller integration
   </p>
