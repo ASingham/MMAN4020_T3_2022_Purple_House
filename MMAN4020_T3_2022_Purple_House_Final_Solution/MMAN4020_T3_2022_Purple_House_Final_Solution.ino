@@ -1,10 +1,14 @@
 
 /*
-Connect ESP32 to AskSensors
-* Description: This sketch connects to a website (https://asksensors.com) using an ESP32 Wifi module.
-* Author: https://asksensors.com, 2018
-* github: https://github.com/asksensors
+MMAN4020_T3_2022_Purple_House_Final_Solution
+* Description: This code manages the following functions
+  - Accessing and reading data from connected temperature sensors
+  - Displaying read in temperature data and current battery level on an OLED display
+  - Connecting to WiFi and sending read in temperature data to a AskSensor (https://asksensors.com)
+* Author: Adam Tan, Max Neville, Tommaso De Battista, Sachin Singham
+* Github: https://github.com/ASingham/MMAN4020_T3_2022_Purple_House
 */
+
 #include <WiFi.h>
 #include <WiFiMulti.h>
 #include <HTTPClient.h>
@@ -15,11 +19,11 @@ Connect ESP32 to AskSensors
 
 WiFiMulti WiFiMulti;
 HTTPClient ask;
+
 // TODO: ESP32 user config
-// const char* ssid = "NotThisOne"; // Wifi SSID
-// const char* password = "CantFollowInstructions?"; // Wifi Password
-const char* ssid = "TelstraBC84CE"; // Wifi SSID
-const char* password = "8tj2y7z9b6"; // Wifi Password
+const char* ssid = "INPUT WiFi SSID"; // Wifi SSID
+const char* password = "INPUT WiFi Password"; // Wifi Password
+
 String apiKeyIn = "qxj0vIPw25K2R5K6onSJ84yS72apbMil"; // API Key
 const unsigned long writeInterval = 25000; // write interval (in ms)
 // ASKSENSORS host config
