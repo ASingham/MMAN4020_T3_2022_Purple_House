@@ -239,7 +239,7 @@ Now the user has Git installed, clone the repo into the desired location using t
 
 ## Data Visualisation
 1. Visualising the live temperature data received from the operating device
-    Log into the [AskSensors website](https://asksensors.com/home.html) and login using the Purple House login details.
+    Log into the [AskSensors website](https://asksensors.com/home.html) using the Purple House login details.
     
     Navigate to the Sensor devices page and press the green `Visualise` button to open the sensor details page. This will contain the previously created series of graphs for live data visualisation. 
     <img
@@ -251,12 +251,57 @@ Now the user has Git installed, clone the repo into the desired location using t
     
     ### Important: Data published to AskSensor is retained for 18 months
     
-2. Further detailed data analysis using developed Web App
+2. Exporting AskSensors data for longterm data storage and further data visualisation
+    
+    AskSensor allows for the data sent to it to be downloaded into CSV format as follows:
+    1. As previously, log into the [AskSensors website](https://asksensors.com/home.html) and navigate to the Sensor Devices page.
+    2. Select the green `visualise` button next to the appropriate sensor device.
+    3. Press the small widget in the top right corner of the desired Temp Sensor module graph as shown below
+      <img
+      src="images/Asksensor-csv-download.jpg"
+      alt="Alt text"
+      style="display: inline-block; margin: 0 auto; max-width: 300px">
+    
+    4. Once prompted, select the `Latest data` export type and the `CSV` format followed by the green `Export` button.
+    
+3. Further detailed data analysis using developed Web App
     A server based web application was developed for further analysis of the temperature data.
     
     This web app can be accessed from anywhere using the following address: 
     ```sh
     https://unswpurplehousedata.web.app/
     ```
+    and should appear as:
+    <img
+      src="images/web-app-home.jpg"
+      alt="Alt text"
+      style="display: inline-block; margin: 0 auto; max-width: 300px">
+    
+    The site allows for the upload of up to 4 CSV files from AskSensors at a time. 
+    
+    Using the above steps, the desired CSV files can be exported from AskSensors, to be then uploaded to the web app.
+    
+    After uploading the desired CSV files, click the purple `SUBMIT` button to load the CSV files into the data analysis web app for visual display.
+    
+    ## Using the Data Visualisation Web App
+    
+    The dashboard home displays four different ranged graphical depictions of the uploaded data: `Today`, `Last 24 Hours`, `Average Temperature This Week`, and `Average Temperature This Year`. 
+    
+    When more that `one` file is uploaded, a banner at the top of the page allows for the selection of data set to be displayed graphically. 
+    
+    By hovering over individual data points in the graphs, specific temperature values are provided.
+    <img
+      src="images/web-app-home.jpg"
+      alt="Alt text"
+      style="display: inline-block; margin: 0 auto; max-width: 300px">
+      
+    In addition to the dashboard homepage, the web app allows for the user to visualise specific  dates by pressing the `View By Date` button in the top most banner. The desired date can be set using the calender function to the right of the `Date Search` banner.
+    <img
+      src="images/web-app-date-selection.jpg"
+      alt="Alt text"
+      style="display: inline-block; margin: 0 auto; max-width: 300px">
     
     ** Note: The web app can handle approximately 600 uploads of csv files per day without requiring a subscription service cost for server hosting.
+    
+
+    
