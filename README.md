@@ -171,12 +171,18 @@ Now the user has Git installed, clone the repo into the desired location using t
 1. Launch Arduino IDE application and from the cloned/downloaded repo, open:
     #### `OneSensorOLEDAskSensorSetup.ino`
 
-2. Navigate within the `OneSensorOLEDAskSensorSetup.ino` file to lines `19` and `20` showing:
+2. Navigate within the `MMAN4020_T3_2022_Purple_House_Final_Solution.ino` file to lines `24` and `25` showing:
     ```sh
-    // const char* ssid = "NotThisOne"; // Wifi SSID
-    // const char* password = "CantFollowInstructions?"; // Wifi Password
+    const char* ssid = "INPUT WiFi SSID"; // Wifi SSID
+    const char* password = "INPUT WiFi Password"; // Wifi Password
     ```
     Edit the characters in inverted commas within these two lines to reflect the Wi-Fi SSID network name and the Wi-Fi password that the device is to be connected to.
+
+3. If desired, the interval at which the temperature sensor collects and transmits data to AskSensors can be changed. 
+    To change this parameter, locate line `28` in file `MMAN4020_T3_2022_Purple_House_Final_Solution.ino` and change the value to the desired value in milliseconds.
+    ``sh
+    const unsigned long writeInterval = 25000; // write interval (in ms)
+    ```
 
 3. Find the unique API key for the AskSensor sensor device setup earlier.
     
@@ -194,9 +200,9 @@ Now the user has Git installed, clone the repo into the desired location using t
       alt="Alt text"
       style="display: inline-block; margin: 0 auto; max-width: 300px">
 
-4. Return to Arduino IDE and navigate back to the `OneSensorOLEDAskSensorSetup.ino` file. Find line 21 showing:
+4. Return to Arduino IDE and navigate back to the `MMAN4020_T3_2022_Purple_House_Final_Solution.ino` file. Find line `30` showing:
     ```sh
-    String apiKeyIn = "RanDomlEtTerAnDnUmbERsEQueNcE12436"; // API Key
+    String apiKeyIn = "RanDomlEtTerAnDnUmbERsEQueNcE124"; // API Key
     ```
 
 5. Save the file after the changes are made
