@@ -58,7 +58,7 @@ Source Repo for remote telemetry module prototype developed on behalf of and in 
     Plug the physical device into the computer using the USB cable. 
     * In Arduino IDE, select the board by clicking through:
     ```sh
-    Tools>Board>Board>Adafruit ESP32 Feather
+    Tools>Board>esp32>Adafruit ESP32 Feather
     ```
     * Select the Port used to connect the board to the computer by clicking through:
     ```sh
@@ -73,7 +73,7 @@ Source Repo for remote telemetry module prototype developed on behalf of and in 
 2. Using the search box, install the following four library packages:
     Search `OneWire` and install:
     ```sh
-    "OneWire" library by Paul Stoffregen et al.
+    "OneWire" library by Jim Studt et al.
     ```
     Search `Dallas` and install:
     ```sh
@@ -81,7 +81,7 @@ Source Repo for remote telemetry module prototype developed on behalf of and in 
     ```
     Search `GFX` and install:
     ```sh
-    "Adafruit GFX" by Adafruit
+    "Adafruit GFX Library" by Adafruit
     ```
     Search `SH110X` and install:
     ```sh
