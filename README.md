@@ -25,7 +25,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Source Repo for remote telemetry module C++ code to be used with ESP32 microcontroller, 4 ds18b20 temperature sensors and AskSensors IoT subscription.
+Source Repo for remote telemetry module prototype developed on behalf of and in conjunction with, The Purple House. Project developed by Noah Correa, Simor Demetriou, Tommaso De Battista, Elliot Garnett, Joshua Gregerson, Jonathan Lee, Zachary Monier Gorton, Max Neville, Sachin Singham, and Adam Tan for School of Mechanical and Manufacturing Engineering Undergraduate Thesis at The University of New South Wales.
 
 
 <!-- GETTING STARTED -->
