@@ -236,6 +236,18 @@ Now the user has Git installed, clone the repo into the desired location using t
   alt="Alt text"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
 
+## Device Shutdown Procedure
+To shutdown the remote telemetry module, all power supplies to the board must be disconnected. This includes both the micro-USB and the LiPO battery if connected.
+
+If no battery is connected and only micro-USB is being used to power the device, disconnection can occur from outside the housing by unplugging the micro-USB cable from the power source.
+
+However, if a LiPO battery is installed, use the following steps:
+1.  First remove the clear enclosure lid to allow access to the component connections.
+
+2.  Once inside, remvoe the micro-USB connection (if disconnection from the board end is preferred).
+
+3.  Then, remove the power supply coming from the battery by carefully removing the JST-PK plug from the socket on the board. 
+    ** Note, this plug may be difficult to pull out, but avoid using excessive force to ensure no damage to the components or connections is caused.
 
 ## Data Visualisation
 1. Visualising the live temperature data received from the operating device
