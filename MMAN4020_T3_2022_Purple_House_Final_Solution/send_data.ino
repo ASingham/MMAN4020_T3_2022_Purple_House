@@ -30,9 +30,13 @@ void send_data(String apiKeyIn, float* temperatures) {
 
 // Function that checks if it has been write interval time has been reached since the last upload
 bool check_write_interval_reached() {
+  Serial.println(lastUpdatedTime);
+  Serial.println(writeInterval);
   if ((lastUpdatedTime + writeInterval) > currentTime) {
     return true;
   } else if (lastUpdatedTime > currentTime) {
+    return true;
+  } else if (lastUpdatedTime == 0){
     return true;
   } else {
     return false;

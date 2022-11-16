@@ -20,13 +20,14 @@ HTTPClient ask;
 // const char* password = "CantFollowInstructions?"; // Wifi Password
 const char* ssid = "TelstraBC84CE"; // Wifi SSID
 const char* password = "8tj2y7z9b6"; // Wifi Password
-String apiKeyIn = "NOJqSJL3EhVkv1Dixm4rPzE5xngy5mwM"; // API Key
-const unsigned int writeInterval = 25000; // write interval (in ms)
+String apiKeyIn = "qxj0vIPw25K2R5K6onSJ84yS72apbMil"; // API Key
+const unsigned long writeInterval = 25000; // write interval (in ms)
 // ASKSENSORS host config
 const char* host = "api.asksensors.com";
 const int httpPort = 80; // port
 bool wifiConnected;
 unsigned long currentTime;
+unsigned long startTime;
 unsigned long lastUpdatedTime = 0;
 
 // Data wire is connected to GPIO4
@@ -54,6 +55,7 @@ void setup() {
   // open serial
   Serial.begin(115200);
   sensors.begin();
+  startTime = millis();
 
   // Setup OLED Screen
   Serial.println("Setting up OLED...");
@@ -102,8 +104,10 @@ void loop() {
   update_screen(temperatures, battValue, wifiConnected);
 
   // Send data to AskSensors
-  if (wifiConnected && check_write_interval_reached()) {
+  if (wifiConnected && (currentTime - startTime >= writeInterval)) {
     send_data(apiKeyIn, temperatures); 
+    startTime = currentTime;
+
   }  
   Serial.println("==============================");
 
