@@ -243,7 +243,7 @@ Now the user has Git installed, clone the repo into the desired location using t
     
     Navigate to the Sensor devices page and press the green `Visualise` button to open the sensor details page. This will contain the previously created series of graphs for live data visualisation. 
     <img
-    src="images/screen-progression.jpg"
+    src="images/Asksensor-data-visualisation.jpg"
     alt="Alt text"
     style="display: inline-block; margin: 0 auto; max-width: 300px">
 
