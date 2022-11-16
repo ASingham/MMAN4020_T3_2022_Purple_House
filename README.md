@@ -249,6 +249,8 @@ However, if a LiPO battery is installed, use the following steps:
 3.  Then, remove the power supply coming from the battery by carefully removing the JST-PK plug from the socket on the board. 
     ** Note, this plug may be difficult to pull out, but avoid using excessive force to ensure no damage to the components or connections is caused.
 
+#### Additional instructions around power management and charging/using the battery can be found in the Battery Manual contained `here`
+
 ## Data Visualisation
 1. Visualising the live temperature data received from the operating device
     Log into the [AskSensors website](https://asksensors.com/home.html) using the Purple House login details.
