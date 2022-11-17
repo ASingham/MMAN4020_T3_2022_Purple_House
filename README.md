@@ -169,7 +169,8 @@ Now the user has Git installed, clone the repo into the desired location using t
 
 ## Flashing Code onto Device
 1. Launch Arduino IDE application and from the cloned/downloaded repo, open:
-    #### `MMAN4020_T3_2022_Purple_House_Final_Solution.ino`
+    
+    `MMAN4020_T3_2022_Purple_House_Final_Solution.ino`
 
 2. Navigate within the `MMAN4020_T3_2022_Purple_House_Final_Solution.ino` file to lines `24` and `25` showing:
     ```sh
@@ -269,8 +270,6 @@ However, if a LiPO battery is installed, use the following steps:
 
     ** Note: A custom dashboard can be created to display user specified graphs and visuals. A tutorial for this can be found [here](https://doc.asksensors.com/docs/d/s1/dashboard-customization/)
     
-    ### Important: Data published to AskSensor is retained for 18 months
-    
 2. Exporting AskSensors data for longterm data storage and further data visualisation
     
     AskSensor allows for the data sent to it to be downloaded into CSV format as follows:
@@ -283,6 +282,8 @@ However, if a LiPO battery is installed, use the following steps:
       style="display: inline-block; margin: 0 auto; max-width: 300px">
     
     4. Once prompted, select the `Latest data` export type and the `CSV` format followed by the green `Export` button.
+
+    ** Important: Data published to AskSensor is only retained for 18 months, so to store data long term, export data as required using the above steps and store somewhere more permanent. 
     
 3. Additional temperature data analystics using Web App
     
