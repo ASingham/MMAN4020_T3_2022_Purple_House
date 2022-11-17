@@ -325,7 +325,7 @@ However, if a LiPO battery is installed, use the following steps:
     
     Additionally, the data visualisation tools can be customised using the settings widget in the top right corner.
     
-    ** Note: The web app can handle approximately 600 uploads of csv files per day without requiring a subscription service cost for server hosting.
+    ** Note: The web app can handle 360MB/day uploads of csv files without requiring a subscription service cost for server hosting. However, the web app can be run locally without any restrictions by following the instructions found in the [README.md](data-visualisation-website/README.md) file inside the data-visualisation-website folder.
     
 
     
