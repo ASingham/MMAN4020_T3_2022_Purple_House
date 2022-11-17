@@ -169,7 +169,7 @@ Now the user has Git installed, clone the repo into the desired location using t
 
 ## Flashing Code onto Device
 1. Launch Arduino IDE application and from the cloned/downloaded repo, open:
-    #### `OneSensorOLEDAskSensorSetup.ino`
+    #### `MMAN4020_T3_2022_Purple_House_Final_Solution.ino`
 
 2. Navigate within the `MMAN4020_T3_2022_Purple_House_Final_Solution.ino` file to lines `24` and `25` showing:
     ```sh
@@ -250,7 +250,7 @@ If no battery is connected and only micro-USB is being used to power the device,
 However, if a LiPO battery is installed, use the following steps:
 1.  First remove the clear enclosure lid to allow access to the component connections.
 
-2.  Once inside, remvoe the micro-USB connection (if disconnection from the board end is preferred).
+2.  Once inside, remove the micro-USB connection (if disconnection from the board end is preferred).
 
 3.  Then, remove the power supply coming from the battery by carefully removing the JST-PK plug from the socket on the board. 
     ** Note, this plug may be difficult to pull out, but avoid using excessive force to ensure no damage to the components or connections is caused.
@@ -284,7 +284,8 @@ However, if a LiPO battery is installed, use the following steps:
     
     4. Once prompted, select the `Latest data` export type and the `CSV` format followed by the green `Export` button.
     
-3. Further detailed data analysis using developed Web App
+3. Additional temperature data analystics using Web App
+    
     A server based web application was developed for further analysis of the temperature data.
     
     This web app can be accessed from anywhere using the following address: 
