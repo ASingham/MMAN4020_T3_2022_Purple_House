@@ -209,7 +209,7 @@ Now the user has Git installed, clone the repo into the desired location using t
 
 6. As before, plug the device into the computer using the USB cable, and select both the board and the port from the Tools menu.
     ```sh
-    Tools>Board>Board>Adafruit ESP32 Feather
+    Tools>Board>esp32>Adafruit ESP32 Feather
     ```
     ```sh
     Tools>Port>"The_COM_Port_Used_by_You"
