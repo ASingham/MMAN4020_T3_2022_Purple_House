@@ -18,6 +18,7 @@
       <li><a href="#Preparing-AskSensors">Preparing AskSensors</a></li>
     </ul>
     <li><a href="#flashing-code-onto-Device">Flashing Code onto Device</a></li>
+    <li><a href="#Sensor-Identification">Sensor Identification</a></li>
     <li><a href="#Data-Visualisation">Data Visualisation</a></li>
   </ol>
 </details>
