@@ -242,6 +242,23 @@ Now the user has Git installed, clone the repo into the desired location using t
   src="images/screen-progression.jpg"
   alt="Alt text"
   style="display: inline-block; margin: 0 auto; max-width: 300px">
+  
+## Sensor Identification
+Once the device is setup and the main display is correctly showing the temperatures for all four sensors, it is important to identify which stream of temperature data corresponds to which physical sensor. To do this, isolate each temperature sensor one-by-one by subjecting a single sensor to differing environmentaly temperatures. Use the following steps or a similar test:
+1.  Take one temperature sensor and submerge the probe into cold water, leaving the remaining 3 sensors together in a different environmental temperature. 
+2.  Using the OLED screen displaying the temperatures for all four sensors, determine which sensor number corresponds to the physical sensor that has been isolated. 
+3.  Record the sensor number that corresponds to the housing gland location of the isolated sensor probe. 
+4.  Repeat steps 1-3 for each of the 4 sensors.
+
+During installation of the device in the field, record which sensor is positioned where, and then update the AskSensors Sensor details to describe this. This can be done as following:
+
+1.  Login to ASkSensors as previously, navigate to the Sensor devices page, and press the pink `Edit` button next to the desired sensor.
+2.  By cross-referencing with the recorded above, edit each of the four created modules so that either their name or description describes the specific installation location. This can be done by pressing the pink `edit` button to the left of each of the modules. An example of how this might look can be seen below:
+<img
+  src="images/Asksensor-description-update.jpg"
+  alt="Alt text"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
+4.  Save the changes by pressing the orange `Save sensor` button at the bottom right of the Edit Sensor page. 
 
 ## Device Shutdown Procedure
 To shutdown the remote telemetry module, all power supplies to the board must be disconnected. This includes both the micro-USB and the LiPO battery if connected.
