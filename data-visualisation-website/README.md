@@ -47,7 +47,7 @@ Simple React web application which allows a user to upload a CSV file containing
     ```
 
 ### Usage
-Launch the application with
+Launch the application locally in development mode with
 ```sh
 npm run dev
 ```
