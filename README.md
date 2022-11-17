@@ -180,7 +180,7 @@ Now the user has Git installed, clone the repo into the desired location using t
 
 3. If desired, the interval at which the temperature sensor collects and transmits data to AskSensors can be changed. 
     To change this parameter, locate line `28` in file `MMAN4020_T3_2022_Purple_House_Final_Solution.ino` and change the value to the desired value in milliseconds.
-    ``sh
+    ```sh
     const unsigned long writeInterval = 25000; // write interval (in ms)
     ```
 
