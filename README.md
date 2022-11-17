@@ -216,7 +216,7 @@ Now the user has Git installed, clone the repo into the desired location using t
     ```
 7. Press the Upload button in the Arduino IDE to compile the code and upload it to the connected board. 
     
-    After a few seconds the output should say:
+    After a few seconds the output banner should display:
     ```sh
     "Done uploading"
     ```
