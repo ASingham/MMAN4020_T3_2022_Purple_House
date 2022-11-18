@@ -299,7 +299,11 @@ However, if a LiPO battery is installed, use the following steps:
       alt="Alt text"
       style="display: inline-block; margin: 0 auto; max-width: 300px">
     
-    4. Once prompted, select the `Latest data` export type and the `CSV` format followed by the green `Export` button.
+    4. Once prompted:
+       - Select the `Latest data` export type for the latest 30 data points.
+       - Or, select `Custom data` export type and input a date range for more data points.
+            
+       Then, select the `CSV` format followed by the green `Export` button. Note: If `Custom data` is selected, the file is requested from the AskSensors download center, and some time is required for the file to be ready for download.
 
     ** Important: Data published to AskSensor is only retained for 18 months, so to store data long term, export data as required using the above steps and store somewhere more permanent. 
     
