@@ -85,7 +85,7 @@ const Dashboard = ({ data, maxTemp }) => {
         <Typography variant='h5'><strong>Last 24 Hours</strong></Typography>
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           { data.dataLast24Hours.length > 0 ?
-            <Graph data={data.dataLast24Hours} maxTemp={maxTemp}/>
+            <Graph data={data.dataLast24Hours} maxTemp={maxTemp} brush/>
             :
             <i>No data available</i>
           }
@@ -93,11 +93,19 @@ const Dashboard = ({ data, maxTemp }) => {
       </ContentCard>
       <ContentCard>
         <Typography variant='h5'><strong>Average Temperature This Week</strong></Typography>
-        <Graph data={data.dataWeek} maxTemp={maxTemp} domain='week'/>
+        { data.dataWeek.length > 0 ?
+          <Graph data={data.dataWeek} maxTemp={maxTemp} domain='week'/>
+          :
+          <i>No data available</i>
+        }
       </ContentCard>
       <ContentCard>
         <Typography variant='h5'><strong>Average Temperature This Year</strong></Typography>
-        <Graph data={data.dataYear} maxTemp={maxTemp} domain='year'/>
+        { data.dataYear.length > 0 ?
+          <Graph data={data.dataYear} maxTemp={maxTemp} domain='year'/>
+          :
+          <i>No data available</i>
+        }
       </ContentCard>
     </>
   );

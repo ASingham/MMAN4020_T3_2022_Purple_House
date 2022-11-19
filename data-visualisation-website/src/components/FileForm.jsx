@@ -20,7 +20,6 @@ const FileForm = ({ onSubmit }) => {
 
   useEffect(() => {
     if (parsedFiles.length > 0 && parsedFiles.length === numFiles) {
-      console.log(parsedFiles);
       onSubmit(parsedFiles);
     }
   }, [parsedFiles]);
@@ -45,7 +44,7 @@ const FileForm = ({ onSubmit }) => {
   const parseCSVFile = (file) => {
     const onComplete = (results) => {
       try {
-        const newResults = CSVParser.parseAskSensors(results);
+        const newResults = CSVParser.parseAskSensors(file.name, results);
         setParsedFiles(prev => [...prev, new Data(newResults)]);
       } catch (e) {
         console.error(e);
@@ -56,7 +55,7 @@ const FileForm = ({ onSubmit }) => {
     };
 
     const onError = (error) => {
-      console.log('Error:', error);
+      console.error('Error:', error);
       setLoading(false);
     };
     

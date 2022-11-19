@@ -33,7 +33,7 @@ const DateSearch = ({ data, maxTemp }) => {
       { dateData.length > 0 &&
         <>
           <ContentCard>
-            <Graph data={dateData} maxTemp={maxTemp}/>
+            <Graph data={dateData} maxTemp={maxTemp} brush/>
           </ContentCard>
           <ContentCard>
             <Table data={dateData} maxTemp={maxTemp}/>
