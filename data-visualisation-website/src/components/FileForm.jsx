@@ -15,48 +15,59 @@ const FileForm = ({ onSubmit }) => {
   const fileRef = useRef();
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [files, setFiles] = useState([]);
   const [parsedFiles, setParsedFiles] = useState([]);
-  const [numFiles, setNumFiles] = useState(0);
 
+  // Listen for files submitted
   useEffect(() => {
-    if (parsedFiles.length > 0 && parsedFiles.length === numFiles) {
-      console.log(parsedFiles);
+    if (files.length) parseFiles();
+  }, [files]);
+
+  // Wait for all files to be parsed
+  useEffect(() => {
+    if (parsedFiles.length > 0 && parsedFiles.length === files.length) {
       onSubmit(parsedFiles);
     }
   }, [parsedFiles]);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setLoading(true);
-    if (!fileRef.current.files.length) {
+  const parseFiles = () => {
+    if (!files.length) {
       setError('No file selected');
-    } else if (fileRef.current.files.length > 4) {
+    } else if (files.length > 4) {
       setError('Too many files');
     } else {
       setError('');
-      setNumFiles(fileRef.current.files.length);
-      for (let i = 0; i < fileRef.current.files.length; i++) {
-        parseCSVFile(fileRef.current.files[i]);
+      
+      for (let i = 0; i < files.length; i++) {
+        parseCSVFile(files[i]);
       }
     }
-    setLoading(false);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setLoading(true);
+    const filesArray = [];
+    Object.keys(fileRef.current.files).forEach(i => {
+      filesArray.push(fileRef.current.files[i]);
+    });
+    setFiles(filesArray);
   };
 
   const parseCSVFile = (file) => {
     const onComplete = (results) => {
       try {
-        const newResults = CSVParser.parseAskSensors(results);
+        const newResults = CSVParser.parseAskSensors(file.name, results);
         setParsedFiles(prev => [...prev, new Data(newResults)]);
       } catch (e) {
         console.error(e);
         setLoading(false);
         setError('Unable to read file. Make sure it is an AskSensors CSV file');
       }
-      
     };
 
     const onError = (error) => {
-      console.log('Error:', error);
+      console.error('Error:', error);
       setLoading(false);
     };
     

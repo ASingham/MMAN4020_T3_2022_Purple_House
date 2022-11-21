@@ -1,7 +1,18 @@
 import Alert from '@mui/material/Alert';
-import { CartesianGrid, Legend, Line, LineChart, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import {
+  Brush,
+  CartesianGrid,
+  Legend,
+  Line,
+  LineChart,
+  ReferenceLine,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from 'recharts';
 
-const Graph = ({ data, maxTemp }) => {
+const Graph = ({ data, maxTemp, brush }) => {
   const CustomLabel = ({ active, payload }) => {
     if (active && payload && payload.length) {
       return (
@@ -40,13 +51,14 @@ const Graph = ({ data, maxTemp }) => {
       { data.length > 0 &&
         <ResponsiveContainer width='100%' height={500}>
           <LineChart data={data} margin={{ top: 10, right: 10, left: 10, bottom: 10 }}>
-            <Line name='Temperature' type='linear' dataKey='temp' unit='°C' dot={<WarningDot/>} stroke='#ce93d8'/>
+            <Line name='Temperature' type='linear' dataKey='temp' unit='°C' dot={brush ? false : <WarningDot/>} stroke='#ce93d8'/>
             <Legend verticalAlign="bottom" height={36}/>
             <CartesianGrid stroke='#ccc' strokeDasharray="5 10" vertical={false}/>
             <XAxis dataKey='time' interval='preserveStartEnd' tickCount={7}/>
             <YAxis type='number' domain={['dataMin-0.5', 'dataMax+0.5']} unit='°C'/>
             <ReferenceLine y={maxTemp} stroke='red' strokeDasharray='9 5'/>
             <Tooltip content={<CustomLabel/>}/>
+            { brush && <Brush dataKey='time'/> }
           </LineChart>
         </ResponsiveContainer>
       }

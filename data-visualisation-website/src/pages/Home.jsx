@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
-import Divider from '@mui/material/Divider';
 import { styled } from '@mui/material/styles';
+import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import { useState } from 'react';
 
@@ -12,13 +12,15 @@ import styles from '../styles/styles.module.css';
 import Dashboard from './Dashboard';
 import DateSearch from './DateSearch';
 
-const DataSelectBox = styled('div')`
+const FileBox = styled(Box)`
+  min-width: 0;
+  flex: 1;
   display: flex;
+  justify-content: center;
   & > * {
-    flex-grow: 1;
+    width: 80%;
   }
 `;
-
 
 const Home = ({ display, setDisplay, allData, setAllData, maxTemp }) => {
   const [selectedData, setSelectedData] = useState(0);
@@ -55,15 +57,15 @@ const Home = ({ display, setDisplay, allData, setAllData, maxTemp }) => {
 
   return (
     <ContentWrapper>
-      <DataSelectBox>
+      <Box sx={{ display: 'flex' }}>
         { allData.map((d, idx) => (
-          <Box key={idx}>
-            <Divider light>
-              <Chip label={d.name} onClick={() => setSelectedData(idx)} color={idx === selectedData ? 'secondary' : 'default'}/>
-            </Divider>
-          </Box>
+          <FileBox key={idx}>
+            <Tooltip title={d.name} arrow>
+              <Chip label={d.name} onClick={() => setSelectedData(idx)} color={idx === selectedData ? 'secondary' : 'default'} />
+            </Tooltip>
+          </FileBox>
         ))}
-      </DataSelectBox>
+      </Box>
       { renderMainContent(display, data) }
     </ContentWrapper>
   );
